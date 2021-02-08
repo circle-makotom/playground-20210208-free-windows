@@ -22,6 +22,6 @@ jobs:
 workflows:
   the-workflow:
     jobs:
-      - build-window
+      - build-windows
       - build-linux
       - build-docker
