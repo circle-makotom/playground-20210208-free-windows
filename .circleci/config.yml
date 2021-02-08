@@ -1,0 +1,27 @@
+version: 2.1
+
+jobs:
+  build-windows:
+    machine:
+      image: windows-server-2019-vs2019:stable
+    resource_class: windows.medium
+    steps:
+      - run: exit
+
+  build-linux:
+    machine: true
+    steps:
+      - run: exit
+
+  build-docker:
+    docker:
+      - image: alpine
+    steps:
+      - run: exit
+
+workflows:
+  the-workflow:
+    jobs:
+      - build-window
+      - build-linux
+      - build-docker
